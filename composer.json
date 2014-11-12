@@ -9,6 +9,7 @@
     "classmap": [
       "lib/RWebReports.php",
       "lib/RWebReportsReport.php",
+      "lib/RWebReportsCommand.php",
       "lib/RWebReportsResult.php"
     ]
   },

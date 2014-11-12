@@ -6,6 +6,10 @@ class RWebReports {
     return new RWebReportsReport();
   }
 
+  public static function newCommand() {
+    return new RWebReportsCommand();
+  }
+
   public static function execute($config) {
     $rwebreportsPath = getenv('RWEBREPORTS_PATH');
     if (!$rwebreportsPath) {
