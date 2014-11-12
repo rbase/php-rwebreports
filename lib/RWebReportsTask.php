@@ -25,20 +25,7 @@ class RWebReportsTask {
     assert(!is_null($this->dsn), 'Must specify dsn');
     assert(!is_null($this->reportName), 'Must specify reportName');
     assert(!is_null($this->whereClause), 'Must specify whereClause');
-
-    $rwebreportsPath = getenv('RWEBREPORTS_PATH');
-    if (!$rwebreportsPath) {
-      throw new Exception('RWEBREPORTS_PATH not set');
-    }
-
-    $config = $this->getConfig();
-    $configPath = tempnam('.', 'rwebreports-');
-    file_put_contents($configPath, $config);
-
-    $output = shell_exec("$rwebreportsPath $configPath");
-    $success = strpos($output, 'OK') === 0;
-    unlink($configPath);
-    return new RWebReportsResult($success, $output, $config);
+    return RWebReports::execute($this->getConfig());
   }
 
   private function getConfig() {
