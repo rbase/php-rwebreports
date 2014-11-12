@@ -2,8 +2,8 @@
 
 class RWebReports {
 
-  public static function newTask() {
-    return new RWebReportsTask();
+  public static function newReport() {
+    return new RWebReportsReport();
   }
 
   public static function execute($config) {

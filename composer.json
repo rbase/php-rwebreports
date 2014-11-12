@@ -8,7 +8,7 @@
   "autoload": {
     "classmap": [
       "lib/RWebReports.php",
-      "lib/RWebReportsTask.php",
+      "lib/RWebReportsReport.php",
       "lib/RWebReportsResult.php"
     ]
   },

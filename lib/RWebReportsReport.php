@@ -1,6 +1,6 @@
 <?php
 
-class RWebReportsTask {
+class RWebReportsReport {
 
   private $dsn;
   private $reportName;

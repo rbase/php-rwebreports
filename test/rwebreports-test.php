@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 
 $filename = 'test.pdf';
 
-$result = RWebReports::newTask()
+$result = RWebReports::newReport()
   ->dsn('RRBYW18')
   ->reportName('Customers')
   ->whereClause("OPTION PDF | FILENAME $filename")
